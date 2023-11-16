@@ -31,14 +31,15 @@ function extractData() {
     const hasImage = imageElement ? "sim" : "não";
 
     if (hasImage === "não") {
-      extractedData.push(name); // Apenas o nome do canal
+      // Verifica se o nome contém "USA" ou "ARG |" e remove se encontrar
+      let cleanedName = name.replace(/USA|ARG|24H-|24H|CA|PT: \|/g, '').trim();
+      extractedData.push(cleanedName); // Adiciona o nome limpo ao array
     }
   });
 
   const channelNames = extractedData.join("\n");
 
-  // Agora você pode fazer o que quiser com os dados extraídos, incluindo a informação da imagem.
-  // Neste exemplo, vamos criar um link de download na página.
+  // Resto do seu código para criar o link de download e baixar o arquivo
   const downloadLink = document.createElement("a");
   downloadLink.href = "data:text/plain;charset=utf-8," + encodeURIComponent(channelNames);
   downloadLink.download = "extracted_names.txt";
@@ -49,3 +50,4 @@ function extractData() {
   // Remover o link após o download
   document.body.removeChild(downloadLink);
 }
+
