@@ -1,0 +1,5 @@
+explicacao o botao baixa imagens ele ira pegar todos os canais q tem o nome na lista canais.txt e salva as imagens dentro de cada pasta do canal dentro da pasta imagens
+depois vc clica em remover numeros aonde ele pega as imagens q estao salvas em C:/Users/vinicius/Desktop/logos e tira os numeros e depois fica ali
+depois vc clica em viar arquivos q ele pega todas imagens de C:/Users/vinicius/Desktop/logos e envia pra pasta logos no servvidor
+depois temos as funcoes de verificacao aonde uma e a lista nomes pastas e salva em nomes_pastas.txt apos isso tambem temos a funcao comparar arquivos aonde ele compara os nomes para ver os q faltam comparando canais.txt e nomes_pastas.txt e salva os nomes q n estao em txt3.txt
+e por ultimo temos a funcao transforma 250x250 aonde ele pega as imagens q estao em C:/Users/vinicius/Desktop/logos baixadas e transforma em 250x250 e coloca em C:/Users/vinicius/Desktop/logos convertidas aconselho gravar o nome do canal antes de baixar economiza tempo
