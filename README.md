@@ -1,5 +1,9 @@
 # Ferramenta para extrair e baixar logos
-Este projeto tem o intuito de otimizar o tempo gasto fazendo servicos manuais e repetitivos verificando cadastros sem imagens baixando transformando em um formato e dimensao padrao e enviando para o servidor
+Este projeto tem o intuito de otimizar o tempo gasto em serviços manuais e repetitivos, verificando cadastros sem imagens e gerando um arquivo de texto. Um script em Python é utilizado para baixar e transformar as imagens em um formato e dimensão padrão, enviando-as para o servidor. Junto com esse sistema, vêm algumas ferramentas de verificação para garantir que todos os nomes da lista tenham sido baixados.
+
+# Pasta Enxtensao logos e Extensao logos 2.0
+Esta extensão do Chrome extrai informações de uma página da web e cria um arquivo de texto com os nomes extraídos. Quando o usuário clica no botão "Extrair Dados" no popup, o script popup.js envia uma mensagem para content.js, que extrai os nomes da página e os envia para background.js. Neste último arquivo, os nomes são convertidos em um arquivo de texto e disponibilizados para download. O manifesto (manifest.json) define as permissões e configurações da extensão.
+a diferenca de uma versao para outra eque sao usados em sistemas diferentes
 
 # Pasta python
 Abra Main.py 
