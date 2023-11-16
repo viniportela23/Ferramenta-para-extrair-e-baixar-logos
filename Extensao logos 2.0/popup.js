@@ -22,19 +22,21 @@ function extractData() {
 
   rows.forEach((row) => {
     const imageElement = row.querySelector('td.dt-center a img');
-    
+
     // Se não houver imagem, extrai o nome do canal
     if (!imageElement) {
       const nameElement = row.querySelector('td:nth-child(3) a strong');
       const name = nameElement ? nameElement.textContent.trim() : '';
-      channelsWithoutImage.push(name);
+
+      // Verifica se o nome contém "USA" ou "ARG |" e remove se encontrar
+      const cleanedName = name.replace(/USA|ARG|24H-|24H|CA|PT: \|/g, '').trim();
+      channelsWithoutImage.push(cleanedName);
     }
   });
 
   const channelNames = channelsWithoutImage.join("\n");
 
-  // Agora você pode fazer o que quiser com os dados extraídos.
-  // Neste exemplo, vamos criar um link de download na página.
+  // Resto do seu código para criar o link de download e baixar o arquivo
   const downloadLink = document.createElement("a");
   downloadLink.href = "data:text/plain;charset=utf-8," + encodeURIComponent(channelNames);
   downloadLink.download = "channels_without_image.txt";
