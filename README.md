@@ -5,6 +5,10 @@ Este projeto tem o intuito de otimizar o tempo gasto em serviços manuais e repe
 Esta extensão do Chrome extrai informações de uma página da web e cria um arquivo de texto com os nomes extraídos. Quando o usuário clica no botão "Extrair Dados" no popup, o script popup.js envia uma mensagem para content.js, que extrai os nomes da página e os envia para background.js. Neste último arquivo, os nomes são convertidos em um arquivo de texto e disponibilizados para download. O manifesto (manifest.json) define as permissões e configurações da extensão.
 a diferenca de uma versao para outra eque sao usados em sistemas diferentes
 
+# Atualização para a Versão 3.0:
+
+A nova versão da extensão "Extensao logos" apresenta melhorias notáveis. Agora, além de extrair nomes, a extensão coleta URLs de imagens associadas a esses nomes. A manipulação avançada de dados, incluindo filtragem, resulta em resultados mais refinados. Focada na extração de logos, a versão 3.0 otimiza o processo de verificação de cadastros sem imagens. Essas mudanças refletem uma abordagem mais abrangente e eficaz.
+
 # Pasta python
 Abra Main.py 
 Explicação: O botão "Baixar Imagens" tem a função de recuperar imagens de todos os canais cujos nomes estão listados no arquivo "canais.txt". Estas imagens são então armazenadas em pastas individuais correspondentes a cada canal, dentro do diretório denominado "imagens".
