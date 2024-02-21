@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Minha Extensão XUI ONE 3.0",
+  "version": "3.0",
+  "description": "Uma extensão para extrair informações do HTML de uma página.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+   "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icone.png",
+      "48": "icone.png",
+      "128": "icone.png"
+    }
+  },
+  "icons": {
+    "16": "icone.png",
+    "48": "icone.png",
+    "128": "icone.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
